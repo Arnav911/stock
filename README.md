@@ -1,13 +1,11 @@
-# stock
-Basic sign up-sign in website which further leads to crop-stock management
+Basic Sign-Up/Sign-In Website Leading to Crop-Stock Management
 
-To run this Project, your machine should have mysql, node.js and other required modules.
+To run this project, your machine should have MySQL, Node.js, and other required modules.
 
-Given below are the requiered dependencies which are requiered in your machine. These are specifically for windows. Run these in the cmd.
-
+Below are the required dependencies for Windows. Run these in the command prompt (cmd):
 npm install express mysql2 bcryptjs jsonwebtoken cors
 
-Make sure that your mysql database has these tables defined:
+Make sure your MySQL database has the following tables defined:
 
 CREATE DATABASE crop_stock;
 USE crop_stock;
@@ -26,8 +24,11 @@ CREATE TABLE stocks (
     FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
 );
 
-You also have to change the server.js file slightly depending upon the password of your MySql command line client and the database you are currently using.
+You may need to modify the server.js file based on your MySQL command-line client password and the database you are using.
+Steps to Run the Project:
 
-To run the Entire code:
-1. Start the Server first by giving the command node server.js
-2. Now run the index.html file. 
+Start the server by running the following command:
+
+node server.js
+
+Open the index.html file in a browser.
