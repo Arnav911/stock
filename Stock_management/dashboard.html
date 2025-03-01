@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dashboard</title>
+    <script defer src="dashboard.js"></script>
+</head>
+<style>
+    body{
+        background-color: #2d2d2d;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        margin-top: 200px;
+        background-color: white;
+        color: black;
+        width: 400px;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+    }
+    button{
+        background: #28a745;
+        color: white;
+        padding: 10px;
+        border: none;
+        width: 80%;
+        cursor: pointer;
+        border-radius: 20px;
+        margin-top: 5px;
+    }
+    input{
+        width: 80%;
+        padding: 8px;
+        margin: 5px 0px;
+    }
+    table{
+        background-color: white;
+        color: #2d2d2d;
+    }
+</style>
+<body>
+    <div class="container">
+        <h2>Welcome to Your Dashboard</h2>
+        
+        <h3>Add Stock</h3>
+        <input type="text" id="crop_name" placeholder="Crop Name">
+        <input type="number" id="quantity" placeholder="Quantity">
+        <button onclick="addStock()">Add Stock</button>
+
+        <h3>Your Stock</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Crop Name</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody id="stockTable"></tbody>
+        </table>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+
+</body>
+</html>
